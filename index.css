@@ -1,0 +1,221 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  /*-webkit-font-smoothing: subpixel-antialiased !important;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+.section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  background: rgba(100, 255, 100, 1) center center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.section__row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: calc(100% - 4rem);
+  margin: 0 2rem;
+}
+
+.carousel__slider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: visible;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.slider__item {
+  flex-shrink: 0;
+}
+
+.slider__item > * {
+  transform: translateZ(0);
+}
+
+.section_plan .section__h2 {
+  margin: 4rem 0 1rem 0;
+}
+
+.section_plan .section__regular-text {
+  margin-bottom: 1rem;
+  font-size: 1.25em;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.plan {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(25% - 2em);
+  min-height: 300px;
+  margin: 0 1em 2em 1em;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.plan__image {
+  height: 150px;
+}
+
+.plan__title {
+  font-family: PN-Bold;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #02579A;
+}
+
+.plan__desc {
+  margin-top: 0.5em;
+  font-family: PN;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: #000;
+}
+
+.plan__text {
+  margin: 1em;
+  font-family: PN;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: #959595;
+  text-align: center;
+}
+
+.plan__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.375em;
+  height: 2.375em;
+  background-color: #02579A;
+  border-bottom-left-radius: 16px;
+}
+
+.plan__label span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: PN;
+  font-size: 0.5em;
+  line-height: 1.25;
+  color: #fff;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%) scale(4);
+          transform: translateY(-50%) scale(4);
+}
+
+@media (max-width: 1180px) {
+  .carousel-btn {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.carousel-btn.btn_left {
+  left: .5rem;
+  transform-origin: left;
+}
+
+.carousel-btn.btn_right {
+  right: .5rem;
+  transform-origin: right;
+}
+
+.carousel-btn.btn_left svg {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.plan {
+  min-width: 260px;
+  margin: 0;
+  box-shadow: none;
+  margin: 0 2rem 0 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  /*flex: 1 1 0;*/
+}
+
+.carousel {
+  height: 400px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 2rem 0;
+  width: 260px;
+  padding: 0 2rem;
+  box-sizing: content-box;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
